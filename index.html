@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUGI's Clan</title>
+
+    <!--フォントの取得-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--DM Serif Displayフォントの取得-->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!--M PLUS Rounded 1cフォントの取得-->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .header {
+            width: 100vw;
+            height: 850px;
+            background: url('https://i.imgur.com/NvfA2sX.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15rem;
+            font-family: "DM Serif Display", serif;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.9);
+        }
+        .member {
+            width: 100vw;
+            min-height: 700px;
+            background: url('https://i.imgur.com/xrNNvKd.jpeg') no-repeat center center/cover;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .burner {
+            padding-right: 1400px;
+            padding-bottom: 10px;
+            left: 0;
+            width: 100%; /* 幅を100%にする */
+            text-align: center; /* 画像を中央に配置 */
+        }
+        .burner img {
+            width: 600px;
+            position: relative; /* 親要素基準にする */
+            left: auto; /* 左右のpaddingで調整 */
+            padding: 0 100px; /* 左右に100pxのpadding */
+            margin: 0 auto; /* 中央に配置 */
+        }
+        .about_burner {
+            padding-right: 1400px;
+            padding-bottom: 10px;
+            left: 0;
+            width: 100%; /* 幅を100%にする */
+            text-align: center; /* 画像を中央に配置 */
+        }
+        .about_burner img {
+            width: 600px;
+            position: relative;
+            left: auto;
+            padding: 0 100px;
+            margin: 0 auto;
+        }
+        .about_text {
+            width: 1500px;
+            height: 400px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            font-size: 30px; 
+            font-family: "M PLUS Rounded 1c", serif;
+            opacity: 0;
+            transform: translateX(50%);
+            transition: opacity 0.5s, transform 1s;
+        }
+        .about {
+            width: 100vw;
+            min-height: 700px;
+            background: url('https://i.imgur.com/wOWgM0I.jpeg') no-repeat center center/cover;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .jikoshoukai {
+            width: 350px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            font-family: "M PLUS Rounded 1c", serif;
+            opacity: 0;
+            transform: translateX(50%);
+            transition: opacity 0.5s, transform 1s;
+        }
+        .jikoshoukai img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 1000;
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <video class="video-overlay" autoplay muted playsinline>
+        <source src="https://i.imgur.com/Cpv8Qbi.mp4" type="video/mp4">
+    </video>
+
+    <div class="header">SUGI's Clan</div>
+
+    <div class="about">
+        <div class="about_burner">
+            <img src="https://i.imgur.com/ZCOZJ36.png" alt="Burner">
+        </div>
+        <div class="about_text">
+            <p>LINEグループから発足したApex Clanです。<br>
+               今のところは特に活動してたりするわけでもないらしい。<br>
+               よくわからんけどそれっぽくやってるらしい。<br>
+               らしいばっかりでほんとによくわからん。</p>
+        </div>
+    </div>
+
+    <div class="member">
+        <div class="burner">
+            <img src="https://i.imgur.com/lHwx0J2.png" alt="Burner">
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 1">
+            <h1>Suginy</h1>
+            <p>リーダーらしい。</p>
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 2">
+            <h1>Thor</h1>
+            <p>すこん部な錦織圭</p>
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 3">
+            <h1>Haranky</h1>
+            <p>わからん。ごめん。</p>
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 4">
+            <h1>Dchiiy</h1>
+            <p>火畜らしい。</p>
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 5">
+            <h1>まこも湯ニキ</h1>
+            <p>ARKに浮気してる</p>
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 6">
+            <h1>kilikky</h1>
+            <p>わからん。ごめん。</p>
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 7">
+            <h1>32Pdesu</h1>
+            <p>クソ雑魚初心者</p>
+        </div>
+        <div class="jikoshoukai">
+            <img src="https://i.imgur.com/NvfA2sX.jpeg" alt="Member 8">
+            <h3>-</h3>
+            <p>-</p>
+        </div>
+    </div>
+
+    <script>
+        const video = document.querySelector('.video-overlay');
+        setTimeout(() => {
+            video.style.animation = 'fadeOut 0.5s forwards';
+            setTimeout(() => video.remove(), 500);
+        }, 2500);
+
+// アニメーション発火
+const elements = document.querySelectorAll('.burner, .about_burner, .about_text, .jikoshoukai');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateX(0)';
+            observer.unobserve(entry.target); // 一度表示されたら監視を停止
+        }
+    });
+});
+
+elements.forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+</body>
+</html>
