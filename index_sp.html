@@ -22,7 +22,7 @@
             overflow-x: hidden;
         }
         .header {
-            width: 100vw;
+            width: auto;
             height: 850px;
             background: url('https://i.imgur.com/NvfA2sX.jpeg') no-repeat center center/cover;
             display: flex;
@@ -33,6 +33,7 @@
             color: rgb(0, 0, 0);
             font-weight: bold;
             text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.9);
+            text-align:center
         }
         .member {
             width: 95vw;
@@ -114,16 +115,40 @@
             border-radius: 50%;
             margin-bottom: 10px;
         }
+        .footer {
+            width: 100vw;
+            min-height: 400px;
+            background: url('https://i.imgur.com/UQET95Z.jpeg') no-repeat center center/cover;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            text-align:center
+        }
+        .footer_links {
+            text-align: center;
+            font-size: 30px; 
+            font-family: "M PLUS Rounded 1c", serif;
+        }
+        .wrap{
+            overflow-x: hidden;
+        }
 
         .video-overlay {
             position: fixed;
-            top: 0;
-            left: -80;
-            width: 100%;
-            height: auto;
+
+            left: -160;
+            width: auto;
+            height: 100%;
             object-fit: cover;
             z-index: 1000;
+            position: absolute;
+            top: 0;
+            left: -150px;
         }
+
         @keyframes fadeOut {
             from { opacity: 1; }
             to { opacity: 0; }
@@ -134,6 +159,8 @@
     <video class="video-overlay" autoplay muted playsinline>
         <source src="https://i.imgur.com/Cpv8Qbi.mp4" type="video/mp4">
     </video>
+
+  <div class="wrap">
 
     <div class="header">
         <h4>SUGI's Clan</h4>
@@ -197,6 +224,17 @@
             <p>-</p>
         </div>
     </div>
+
+    <div class="footer">
+        <div class="footer_links">
+            <h5>Created by @32Pdesu</h5>
+            <a href="https://x.com/TanukiYy" target="_blank">X(旧Twitter)</a>
+        　<br>
+            <a href="https://sugis-clan.github.io/SUGIs-Clan/wait.html">YouTube</a>
+        </div>
+    </div>
+
+  </div>
 
     <script>
         const video = document.querySelector('.video-overlay');
