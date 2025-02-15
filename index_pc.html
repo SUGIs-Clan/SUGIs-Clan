@@ -130,6 +130,9 @@
             font-size: 30px; 
             font-family: "M PLUS Rounded 1c", serif;
         }
+        .wrap{
+            overflow: hidden;
+        }
 
         .video-overlay {
             position: fixed;
@@ -150,7 +153,7 @@
     <video class="video-overlay" autoplay muted playsinline>
         <source src="https://i.imgur.com/Cpv8Qbi.mp4" type="video/mp4">
     </video>
-
+  <div class="wrap">
     <div class="header">SUGI's Clan</div>
 
     <div class="about">
@@ -217,9 +220,10 @@
             <h5>Created by @32Pdesu</h5>
             <a href="https://x.com/TanukiYy" target="_blank">X(旧Twitter)</a>
         　
-            <a href="https://sugis-clan.github.io/SUGIs-Clan/wait.html">YouTube</a>
+            <a href="https://sugis-clan.github.io/SUGIs-Clan/wait.html" target="_blank">YouTube</a>
         </div>
     </div>
+  </div>
 
     <script>
         const video = document.querySelector('.video-overlay');
