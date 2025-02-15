@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>SUGI's Clan</title>
-    <script>
-        // 画面サイズに応じて読み込むHTMLファイルを切り替える
-        if (window.innerWidth >= 768) { // 768px以上はPC用
-            window.location.href = "index_pc.html";
-        } else { // 768px未満はスマホ用
-            window.location.href = "index_sp.html";
-        }
-    </script>
+  <meta charset="UTF-8">
+  <title>SUGI's Clan</title>
+  <script>
+    function redirectBasedOnDevice() {
+      const isMobile = /iPhone|Android|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+      const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+      if (isMobile && isPortrait) {
+        window.location.href = "https://sugis-clan.github.io/SUGIs-Clan/index_sp.html";
+      } else {
+        window.location.href = "https://sugis-clan.github.io/SUGIs-Clan/index_pc.html";
+      }
+    }
+
+    // ページ読み込み時に実行
+    window.onload = redirectBasedOnDevice;
+
+    // 画面の向きが変わった際に実行（タブレットの横持ち/縦持ち対応）
+    window.addEventListener("resize", redirectBasedOnDevice);
+  </script>
 </head>
 <body>
-    <h1>Loading...</h1>
+  <noscript>
+    <p>JavaScriptが無効になっています。お使いのブラウザでJavaScriptを有効にしてください。</p>
+    <p>
+      <a href="https://sugis-clan.github.io/SUGIs-Clan/index_sp.html">スマートフォン・タブレット(縦持ち)の方はこちら</a><br>
+      <a href="https://sugis-clan.github.io/SUGIs-Clan/index_pc.html">PC・タブレット(横持ち)の方はこちら</a>
+    </p>
+  </noscript>
 </body>
 </html>
